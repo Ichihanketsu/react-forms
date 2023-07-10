@@ -1,18 +1,23 @@
-// import { COLOR_PRIMARY } from "common/styles/Colors";
+import {
+  PRIMARY_COLOR,
+  TEXT_COLOR_LIGHT,
+  DISABLED_COLOR,
+} from "../../common/colors";
 import { Col, Container, Row } from "../../components/Grid/Grid.component";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const forms = [
   {
-    name: "Form",
+    name: "User Form",
     path: "/form",
     number: "1",
   },
 ];
 
 const FormHolder = styled.div`
-  border: 1px solid #e4e4e4;
+  border: 2px solid ${PRIMARY_COLOR};
+  background: ${DISABLED_COLOR};
   height: 150px;
   border-radius: 5px;
   margin: 15px 0;
@@ -21,7 +26,7 @@ const FormHolder = styled.div`
   justify-content: center;
   font-size: 25px;
   outline: 0;
-  color: #ffffff;
+  color: ${TEXT_COLOR_LIGHT};
   text-decoration: none;
   text-align: center;
 `;
@@ -29,17 +34,10 @@ const FormHolder = styled.div`
 const Home = () => (
   <Container>
     <Row>
-      <Col sm={12}>
-        <h1 style={{ color: "white" }}>Forms:</h1>
-      </Col>
-    </Row>
-    <Row>
       {forms.map((form) => (
-        <Col sm={4}>
+        <Col key={form.number} sm={3}>
           <Link to={form.path} style={{ textDecoration: "none" }}>
-            <FormHolder>
-              {form.number}) {form.name}
-            </FormHolder>
+            <FormHolder>{form.name}</FormHolder>
           </Link>
         </Col>
       ))}

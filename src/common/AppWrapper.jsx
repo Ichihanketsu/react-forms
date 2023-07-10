@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Routes from "../routes/index";
 import { AppContextProvider } from "../utils/context";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { TERTIARY_COLOR } from "../common/colors";
 
 const Div = styled.div`
   height: 100%;
-  background-color: #1a1a1d;
+  background-color: ${TERTIARY_COLOR};
   color: white;
 `;
 

@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import {
+  DISABLED_COLOR,
+  PRIMARY_COLOR,
+  TEXT_COLOR_LIGHT,
+} from "../../common/colors";
 
-export const StyledPrimaryButton = styled.button`
+export const PrimaryButton = styled.button`
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -12,14 +17,14 @@ export const StyledPrimaryButton = styled.button`
   padding: ${(props) => (props.padding ? props.padding : "16px 24px")};
   margin: ${(props) => (props.margin ? props.margin : "0")};
   cursor: pointer;
-  color: ${COLOR_PRIMARY_BUTTON_FONT};
-  background: ${COLOR_PRIMARY_BUTTON};
+  color: ${TEXT_COLOR_LIGHT};
+  background: ${PRIMARY_COLOR};
   border: none;
   font-size: 16px;
   font-weight: 700;
   margin-top: 15px;
   :disabled {
-    background: ${COLOR_BUTTON_DISABLED};
+    background: ${DISABLED_COLOR};
   }
 
   :hover {

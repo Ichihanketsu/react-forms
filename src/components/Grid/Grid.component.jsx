@@ -4,6 +4,7 @@ import {
   Col as ColGrid,
   Container as ContainerGrid,
 } from "react-grid-system";
+import { BACKGROUND_COLOR } from "../../common/colors";
 
 export const Container = styled(ContainerGrid)`
   padding-top: 15px;
