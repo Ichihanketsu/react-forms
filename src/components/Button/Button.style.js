@@ -23,7 +23,7 @@ export const PrimaryButton = styled.button`
   font-size: 16px;
   font-weight: 700;
   margin-top: 15px;
-  :disabled {
+  &:disabled {
     background: ${DISABLED_COLOR};
   }
 

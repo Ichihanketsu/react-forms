@@ -25,7 +25,6 @@ const BorderInput = ({ name, registerOptions, label, placeholder }) => {
 
 BorderInput.defaultProps = {
   registerOptions: {},
-  customStyle: {},
   label: "",
 };
 

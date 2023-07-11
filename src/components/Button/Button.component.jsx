@@ -1,16 +1,10 @@
 import PropTypes from "prop-types";
 import { PrimaryButton } from "./Button.style";
-
-export const Primary = ({
-  onClick,
-  value,
-  loading,
-  width,
-  margin,
-  disabled,
-  style,
-  id,
-}) => {
+import { useFormContext } from "react-hook-form";
+export const Primary = ({ onClick, value, loading, disabled, id }) => {
+  const {
+    formState: { isLoading },
+  } = useFormContext();
   const canClick = () => {
     if (!loading) {
       if (onClick) {
@@ -20,16 +14,14 @@ export const Primary = ({
   };
   return (
     <PrimaryButton
+      className={isLoading ? "disabled" : ""}
       id={id}
       value={value}
       onClick={canClick}
-      disabled={loading || disabled}
-      width={width}
-      margin={margin}
-      style={style}
+      disabled={isLoading || disabled}
     >
-      {!loading && value}
-      {loading && "Loading ..."}
+      {!isLoading && value}
+      {isLoading && "Loading..."}
     </PrimaryButton>
   );
 };
@@ -40,9 +32,6 @@ Primary.prototype = {
   onClick: PropTypes.func,
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
-  width: PropTypes.string,
-  margin: PropTypes.string,
-  style: PropTypes.object,
 };
 
 Primary.defaultProps = {
@@ -50,9 +39,6 @@ Primary.defaultProps = {
   onClick: undefined,
   loading: false,
   disabled: false,
-  width: undefined,
-  margin: undefined,
-  style: undefined,
 };
 
 const Button = {
