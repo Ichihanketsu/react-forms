@@ -21,7 +21,7 @@ const Form = () => {
 
   const submit = (values) => {
     setData(values);
-    alert(JSON.stringify(values, undefined, 2));
+    // alert(JSON.stringify(values, undefined, 2));
   };
 
   return (
