@@ -6,17 +6,24 @@ import {
 } from "../../../../components/Grid/Grid.component";
 import { Card, DisplayCard } from "../../../../components/Card/Card.component";
 import { useForm, FormProvider } from "react-hook-form";
-import FormComponent from "./Form.component";
+import EditFormComponent from "./EditForm.component";
 
-const Form = () => {
+const getUser = () =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        firstName: "Nicholas",
+        lastName: "Shamrock",
+        email: "nicholas.shamrock@openvantage.co.za",
+        status: "option2",
+      });
+    }, 2000);
+  });
+
+const EditForm = () => {
   const [data, setData] = useState({});
   const methods = useForm({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      status: "",
-    },
+    defaultValues: async () => await getUser(),
   });
 
   const submit = (values) => {
@@ -29,9 +36,9 @@ const Form = () => {
       <Col>
         <Row>
           <Card>
-            <h2 style={{ marginTop: 0, color: "white" }}>Form</h2>
+            <h2 style={{ marginTop: 0, color: "white" }}>Edit Form</h2>
             <FormProvider {...methods}>
-              <FormComponent submit={submit} />
+              <EditFormComponent submit={submit} />
             </FormProvider>
           </Card>
         </Row>
@@ -45,4 +52,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default EditForm;

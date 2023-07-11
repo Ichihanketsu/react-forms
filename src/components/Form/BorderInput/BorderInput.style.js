@@ -3,7 +3,7 @@ import {
   TERTIARY_COLOR,
   TEXT_COLOR_DARK,
   ERROR_COLOR,
-} from "../../common/colors";
+} from "../../../common/colors";
 
 export const StyledInput = styled.input`
   width: 100%;
@@ -16,7 +16,7 @@ export const StyledInput = styled.input`
     props.backgroundColor ? props.backgroundColor : "transparent"};
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: #fff;
 `;
 
 export const InputHeader = styled.div`

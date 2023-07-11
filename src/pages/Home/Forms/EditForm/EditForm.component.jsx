@@ -10,7 +10,7 @@ import Button from "../../../../components/Button/Button.component";
 import BorderInput from "../../../../components/Form/BorderInput/BorderInput.component";
 import MultiButton from "../../../../components/Form/MultiButton/MultiButton.component";
 
-const FormComponent = ({ submit }) => {
+const EditFormComponent = ({ submit }) => {
   const { handleSubmit } = useFormContext();
 
   const options = [
@@ -65,8 +65,8 @@ const FormComponent = ({ submit }) => {
   );
 };
 
-FormComponent.propTypes = {
+EditFormComponent.propTypes = {
   submit: PropTypes.func.isRequired,
 };
 
-export default FormComponent;
+export default EditFormComponent;

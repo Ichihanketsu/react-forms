@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { HIGHLIGHT_COLOR } from "../../common/colors";
+import { HIGHLIGHT_COLOR } from "../../../common/colors";
 
 export const StyledFormContainer = styled.div`
   display: flex;
   background: #4e4e50;
-  width: 800px;
+  width: 100% !important;
   height: auto;
   padding: 10px 20px;
   margin: 5px;

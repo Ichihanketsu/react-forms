@@ -4,7 +4,6 @@ import {
   Col as ColGrid,
   Container as ContainerGrid,
 } from "react-grid-system";
-import { BACKGROUND_COLOR } from "../../common/colors";
 
 export const Container = styled(ContainerGrid)`
   padding-top: 15px;
@@ -12,11 +11,16 @@ export const Container = styled(ContainerGrid)`
 `;
 
 export const Row = styled(RowGrid)`
+  justify-content: center !important;
   margin-bottom: ${(props) =>
     props.bottomMargin ? props.bottomMargin : "30px"};
 `;
 
 export const Col = styled(ColGrid)``;
+
+export const ColCenter = styled(ColGrid)`
+  text-align: center !important;
+`;
 
 export const StyledCol = styled(Col)`
   padding: ${(props) => (props.padding ? props.padding : "10px")};

@@ -1,7 +1,8 @@
 import { Navigate } from "react-router-dom";
-import ErrorPage from "../pages/Error/Error.page";
 import Home from "../pages/Home/Home.page";
 import Form1 from "../pages/Home/Forms/Form/Form.page";
+import EditForm from "../pages/Home/Forms/EditForm/EditForm.page";
+import ErrorPage from "../pages/Error/Error.page";
 
 const LoginRoutes = [
   {
@@ -23,6 +24,11 @@ const LoginRoutes = [
     name: "Form",
     path: "/form",
     element: <Form1 />,
+  },
+  {
+    name: "Edit Form",
+    path: "/editForm",
+    element: <EditForm />,
   },
 ];
 

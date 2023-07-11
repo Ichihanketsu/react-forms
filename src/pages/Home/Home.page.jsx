@@ -13,22 +13,27 @@ const forms = [
     path: "/form",
     number: "1",
   },
+  {
+    name: "Edit Form",
+    path: "/editForm",
+    number: "2",
+  },
 ];
 
 const FormHolder = styled.div`
   border: 2px solid ${PRIMARY_COLOR};
   background: ${DISABLED_COLOR};
   height: 150px;
+  line-height: 150px;
   border-radius: 5px;
   margin: 15px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 25px;
-  outline: 0;
   color: ${TEXT_COLOR_LIGHT};
-  text-decoration: none;
   text-align: center;
+
+  &:hover {
+    background: ${PRIMARY_COLOR};
+  }
 `;
 
 const Home = () => (
