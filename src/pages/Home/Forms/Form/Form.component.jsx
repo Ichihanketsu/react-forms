@@ -46,6 +46,15 @@ const FormComponent = ({ submit }) => {
           />
         </Col>
       </Row>
+      <Row>
+        <Col>
+          <BorderInput
+            name="phone"
+            registerOptions={{ required: "Please enter a phone number." }}
+            label="Phone Number"
+          />
+        </Col>
+      </Row>
       <ColCenter>
         <MultiButton
           name="status"

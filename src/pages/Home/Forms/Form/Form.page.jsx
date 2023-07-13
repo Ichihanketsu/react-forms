@@ -15,6 +15,7 @@ const Form = () => {
       firstName: "",
       lastName: "",
       email: "",
+      phone: "",
       status: "",
     },
   });

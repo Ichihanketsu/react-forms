@@ -15,6 +15,7 @@ const getUser = () =>
         firstName: "Nicholas",
         lastName: "Shamrock",
         email: "nicholas.shamrock@openvantage.co.za",
+        phone: "001122334455",
         status: "option2",
       });
     }, 2000);
